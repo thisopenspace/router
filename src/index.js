@@ -178,6 +178,7 @@ class RouterImpl extends React.PureComponent {
       children,
       baseuri,
       component = "div",
+      style,
       ...domProps
     } = this.props;
     let routes = React.Children.map(children, createRoute(basepath));
@@ -207,7 +208,9 @@ class RouterImpl extends React.PureComponent {
         element,
         props,
         element.props.children ? (
-          <Router primary={primary}>{element.props.children}</Router>
+          <Router primary={primary} style={style}>
+            {element.props.children}
+          </Router>
         ) : (
           undefined
         )
