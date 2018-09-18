@@ -206,8 +206,7 @@ var RouterImpl = function (_React$PureComponent) {
         baseuri = _props.baseuri,
         _props$component = _props.component,
         component = _props$component === undefined ? "div" : _props$component,
-        style = _props.style,
-        domProps = _objectWithoutProperties(_props, ["location", "navigate", "basepath", "primary", "children", "baseuri", "component", "style"]);
+        domProps = _objectWithoutProperties(_props, ["location", "navigate", "basepath", "primary", "children", "baseuri", "component"]);
 
     var routes = React.Children.map(children, createRoute(basepath));
     var pathname = location.pathname;
@@ -235,7 +234,7 @@ var RouterImpl = function (_React$PureComponent) {
 
       var clone = React.cloneElement(element, props, element.props.children ? React.createElement(
         Router,
-        { primary: primary, style: style },
+        { primary: primary, style: domProps.style },
         element.props.children
       ) : undefined);
 
