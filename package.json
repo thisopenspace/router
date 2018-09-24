@@ -1,6 +1,6 @@
 {
   "name": "@joshuppercase/router",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Next generation Routing for React.",
   "main": "index.js",
   "module": "es/index.js",
@@ -80,6 +80,7 @@
     "printWidth": 80
   },
   "dependencies": {
+    "@types/history": "^4.7.0",
     "create-react-context": "^0.2.1",
     "history": "^4.7.2",
     "invariant": "^2.2.3",
